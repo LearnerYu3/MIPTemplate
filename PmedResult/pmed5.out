@@ -1,0 +1,90 @@
+Sender: LSF System <lsfadmin@cu02>
+Subject: Job 878453: <pmed5> in cluster <cluster1> Done
+
+Job <pmed5> was submitted from host <mgt> by user <yuchengyang> in cluster <cluster1> at Sat Mar  4 19:40:54 2023
+Job was executed on host(s) <cu02>, in queue <batch>, as user <yuchengyang> in cluster <cluster1> at Sat Mar  4 19:40:56 2023
+</share/home/yuchengyang> was used as the home directory.
+</share/home/yuchengyang/Template> was used as the working directory.
+Started at Sat Mar  4 19:40:56 2023
+Terminated at Sat Mar  4 19:41:06 2023
+Results reported at Sat Mar  4 19:41:06 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+julia src/pmed/pmed.jl data/pmed/pmed5.txt 
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   10.01 sec.
+    Max Memory :                                 300 MB
+    Average Memory :                             281.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                19
+    Run time :                                   10 sec.
+    Turnaround time :                            12 sec.
+
+The output (if any) follows:
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Generic callback                                 0x60
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 200 columns, and 100 nonzeros.
+Reduced MIP has 100 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.05 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 200 columns, and 100 nonzeros.
+Reduced MIP has 100 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.05 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.04 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0       37.3526    35                      0.0000        0         
+*     0+    0                         2110.0000       37.3526            98.23%
+      0     0     1209.0091    22     2110.0000 UserPurge2: 61       82   42.70%
+*     0+    0                         1677.0000     1209.0091            27.91%
+      0     0     1327.3452    12     1677.0000      Cuts: 51      117   20.85%
+*     0+    0                         1418.0000     1327.3452             6.39%
+      0     0     1351.3036     6     1418.0000 UserPurge2: 9      129    4.70%
+*     0+    0                         1361.0000     1351.3036             0.71%
+*     0     0      integral     0     1355.0000 UserPurge2: 3      135    0.00%
+      0     0        cutoff           1355.0000     1355.0000      135    0.00%
+Elapsed time = 0.62 sec. (5.39 ticks, tree = 0.01 MB, solutions = 5)
+
+User cuts applied:  184
+
+Root node processing (before b&c):
+  Real time             =    0.62 sec. (5.40 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.62 sec. (5.40 ticks)
+clients: 100 facilities: 100 p: 33
+Solution Y: [1, 4, 8, 9, 14, 19, 25, 26, 29, 31, 33, 36, 37, 38, 41, 49, 51, 53, 55, 58, 65, 69, 70, 73, 75, 81, 82, 85, 88, 91, 94, 95, 97]
+termination_status(model) = MathOptInterface.OPTIMAL
+primal_status(model) = MathOptInterface.FEASIBLE_POINT
+objective_value(model) = 1355.0
+solve_time(model) = 0.6173651218414307
+
+
+PS:
+
+Read file <PmedResult/pmed5.err> for stderr output of this job.
+

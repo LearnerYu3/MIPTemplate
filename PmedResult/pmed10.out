@@ -1,0 +1,88 @@
+Sender: LSF System <lsfadmin@cu02>
+Subject: Job 878458: <pmed10> in cluster <cluster1> Done
+
+Job <pmed10> was submitted from host <mgt> by user <yuchengyang> in cluster <cluster1> at Sat Mar  4 19:40:54 2023
+Job was executed on host(s) <cu02>, in queue <batch>, as user <yuchengyang> in cluster <cluster1> at Sat Mar  4 19:40:56 2023
+</share/home/yuchengyang> was used as the home directory.
+</share/home/yuchengyang/Template> was used as the working directory.
+Started at Sat Mar  4 19:40:56 2023
+Terminated at Sat Mar  4 19:41:06 2023
+Results reported at Sat Mar  4 19:41:06 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+julia src/pmed/pmed.jl data/pmed/pmed10.txt 
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   10.24 sec.
+    Max Memory :                                 332 MB
+    Average Memory :                             134.25 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                19
+    Run time :                                   11 sec.
+    Turnaround time :                            12 sec.
+
+The output (if any) follows:
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Generic callback                                 0x60
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 400 columns, and 200 nonzeros.
+Reduced MIP has 200 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.10 ticks)
+Probing time = 0.00 sec. (0.02 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 400 columns, and 200 nonzeros.
+Reduced MIP has 200 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.10 ticks)
+Probing time = 0.00 sec. (0.02 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.08 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0       82.1627    63                      0.0000        0         
+*     0+    0                         2022.0000       82.1627            95.94%
+      0     0     1143.8136    53     2022.0000 UserPurge2: 100      152   43.43%
+*     0+    0                         1454.0000     1143.8136            21.33%
+      0     0     1243.8664     9     1454.0000      Cuts: 83      219   14.45%
+*     0+    0                         1265.0000     1243.8664             1.67%
+*     0     0      integral     0     1255.0000 UserPurge2: 13      230    0.00%
+      0     0        cutoff           1255.0000     1255.0000      230    0.00%
+Elapsed time = 0.62 sec. (10.83 ticks, tree = 0.01 MB, solutions = 4)
+
+User cuts applied:  364
+
+Root node processing (before b&c):
+  Real time             =    0.62 sec. (10.86 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.62 sec. (10.86 ticks)
+clients: 200 facilities: 200 p: 67
+Solution Y: [3, 4, 12, 15, 17, 19, 31, 35, 39, 41, 42, 43, 47, 48, 50, 55, 58, 59, 61, 64, 65, 68, 69, 71, 72, 75, 80, 81, 85, 97, 104, 108, 110, 112, 114, 119, 122, 123, 124, 128, 129, 131, 133, 135, 137, 141, 144, 145, 146, 148, 151, 152, 156, 158, 166, 168, 172, 175, 176, 180, 183, 187, 191, 193, 196, 199, 200]
+termination_status(model) = MathOptInterface.OPTIMAL
+primal_status(model) = MathOptInterface.FEASIBLE_POINT
+objective_value(model) = 1255.0
+solve_time(model) = 0.6240909099578857
+
+
+PS:
+
+Read file <PmedResult/pmed10.err> for stderr output of this job.
+

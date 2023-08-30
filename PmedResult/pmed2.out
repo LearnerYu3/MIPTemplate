@@ -1,0 +1,117 @@
+Sender: LSF System <lsfadmin@cu02>
+Subject: Job 878450: <pmed2> in cluster <cluster1> Done
+
+Job <pmed2> was submitted from host <mgt> by user <yuchengyang> in cluster <cluster1> at Sat Mar  4 19:40:54 2023
+Job was executed on host(s) <cu02>, in queue <batch>, as user <yuchengyang> in cluster <cluster1> at Sat Mar  4 19:40:55 2023
+</share/home/yuchengyang> was used as the home directory.
+</share/home/yuchengyang/Template> was used as the working directory.
+Started at Sat Mar  4 19:40:55 2023
+Terminated at Sat Mar  4 19:41:06 2023
+Results reported at Sat Mar  4 19:41:06 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+julia src/pmed/pmed.jl data/pmed/pmed2.txt 
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   10.14 sec.
+    Max Memory :                                 304 MB
+    Average Memory :                             210.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                19
+    Run time :                                   10 sec.
+    Turnaround time :                            12 sec.
+
+The output (if any) follows:
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               7200
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Generic callback                                 0x60
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 200 columns, and 100 nonzeros.
+Reduced MIP has 100 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.05 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 200 columns, and 100 nonzeros.
+Reduced MIP has 100 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.05 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.04 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     1785.5062    12                      0.0000        0         
+*     0+    0                         5158.0000     1785.5062            65.38%
+      0     0     4039.2451    10     5158.0000 UserPurge2: 81      105   21.69%
+*     0+    0                         4123.0000     4039.2451             2.03%
+      0     0     4073.4327    19     4123.0000      Cuts: 32      130    1.20%
+      0     0     4085.0571     6     4123.0000 UserPurge2: 61      147    0.92%
+*     0+    0                         4105.0000     4085.0571             0.49%
+
+Repeating presolve.
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 60 columns.
+Reduced MIP has 1 rows, 140 columns, and 40 nonzeros.
+Reduced MIP has 40 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.04 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 1 rows, 140 columns, and 40 nonzeros.
+Reduced MIP has 40 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.03 ticks)
+Represolve time = 0.00 sec. (0.38 ticks)
+Probing time = 0.00 sec. (0.00 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.84 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                         4105.0000     4085.0571             0.49%
+      0     0     4086.1429     6     4105.0000     4086.1429      334    0.46%
+      0     0     4087.1212    12     4105.0000 UserPurge2: 2      345    0.44%
+      0     0     4088.0000    10     4105.0000 UserPurge2: 2      347    0.41%
+      0     0     4088.1429    14     4105.0000 UserPurge2: 1      349    0.41%
+      0     0     4088.5000    14     4105.0000 UserPurge2: 1      350    0.40%
+      0     2     4088.5000    14     4105.0000     4089.0000      350    0.39%
+Elapsed time = 0.63 sec. (14.12 ticks, tree = 0.01 MB, solutions = 3)
+*     2     2      integral     0     4093.0000     4089.0000      361    0.10%
+
+User cuts applied:  179
+
+Root node processing (before b&c):
+  Real time             =    0.63 sec. (14.12 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.61 ticks)
+                          ------------
+Total (root+branch&cut) =    0.63 sec. (14.73 ticks)
+clients: 100 facilities: 100 p: 10
+Solution Y: [6, 8, 12, 37, 41, 45, 58, 67, 95, 99]
+termination_status(model) = MathOptInterface.OPTIMAL
+primal_status(model) = MathOptInterface.FEASIBLE_POINT
+objective_value(model) = 4093.0
+solve_time(model) = 0.6283128261566162
+
+
+PS:
+
+Read file <PmedResult/pmed2.err> for stderr output of this job.
+
